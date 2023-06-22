@@ -8,8 +8,8 @@ const generateToken = (email: string) => {
     });
 };
 
-const verifyToken = async () => {
-
+const verifyToken = (jwt: string) => {
+    return verify(jwt, JWT_SECRET);
 };
 
 export { generateToken, verifyToken }
